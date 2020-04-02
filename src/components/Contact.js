@@ -15,7 +15,7 @@ export const Contact = () => {
             <span className="name">{name.pseudo}</span>
             <div className="status"> 
                 <li className="status-online">
-                <a className="status-text">{online ? "online" : "offline"}</a>
+                <a>{online ? "online" : "offline"}</a>
                 </li>
             </div>
         </div>    
