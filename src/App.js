@@ -1,7 +1,7 @@
 import React from 'react';
 import { Contact } from './components/Contact';
 import './components/Contact.css';
-import {avatar, firstName,lastName,online, keith, jill, brittany} from "./character"
+import {keith, jill, brittany} from "./character"
 
 function App() {
   return (
