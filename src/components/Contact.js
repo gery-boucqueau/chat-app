@@ -1,25 +1,26 @@
 import React from 'react';
 import './Contact.css';
 
-const image = "https://randomuser.me/api/portraits/men/25.jpg";
-const name = {
-  pseudo: "Keith Brewer"
-};
-const online = true;
-
-export const Contact = () => {
+export const Contact = ({avatar, firstName, lastName, online}) => {
     return (
     <div  className="Contact">
-        <img src={image} className="avatar" alt="" />
+        <img src={avatar} className="avatar" alt="" />
         <div>
-            <span className="name">{name.pseudo}</span>
+            <p className="name">{firstName} {lastName}</p>
             <div className="status"> 
-                <li className="status-online">
-                <a>{online ? "online" : "offline"}</a>
-                </li>
+                <div className={online ? "status-online" : "status-offline"}/>
+                <p className="status-text">{online ? "online" : "offline"}</p>
             </div>
         </div>    
     </div>  
     )
 }
 
+/*const Avatar = ({image, firstName, lastName}) => {
+    return (
+    <div>
+        <img src={image}/>
+        <p>{firstName} {lastName}</p>
+    </div>
+    );
+}*/
