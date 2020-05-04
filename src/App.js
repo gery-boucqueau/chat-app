@@ -1,14 +1,10 @@
 import React from 'react';
-import { Contact } from './components/Contact';
-import './components/Contact.css';
-import {keith, jill, brittany} from "./character"
+import ContactList from './components/ContactList';
 
 function App() {
   return (
     <div>
-      <Contact {...jill} />
-      <Contact {...keith}/>
-      <Contact {...brittany}/>
+      <ContactList />
     </div>
   );
 }
