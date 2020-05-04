@@ -1,26 +1,19 @@
 import React from 'react';
 import './Contact.css';
 
-export const Contact = ({avatar, firstName, lastName, online}) => {
+const Contact = (props) => {
     return (
     <div  className="Contact">
-        <img src={avatar} className="avatar" alt="" />
+        <img src={props.avatar} className="avatar" alt="" />
         <div>
-            <p className="name">{firstName} {lastName}</p>
+            <p className="name">{props.name}</p>
             <div className="status"> 
-                <div className={online ? "status-online" : "status-offline"}/>
-                <p className="status-text">{online ? "online" : "offline"}</p>
+                <div className={props.online ? "status-online" : "status-offline"}/>
+                <p className="status-text">{props.online ? "online" : "offline"}</p>
             </div>
         </div>    
     </div>  
     )
 }
 
-/*const Avatar = ({image, firstName, lastName}) => {
-    return (
-    <div>
-        <img src={image}/>
-        <p>{firstName} {lastName}</p>
-    </div>
-    );
-}*/
+export default Contact;
